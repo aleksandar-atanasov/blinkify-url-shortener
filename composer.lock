@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47612f5ad8b6880d920689cf97d6bdd2",
+    "content-hash": "7b5113196247ceafca8ca0ff35181379",
     "packages": [
         {
             "name": "brick/math",
@@ -60,6 +60,62 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "caneara/snowflake",
+            "version": "v2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caneara/snowflake.git",
+                "reference": "bded88f7f65fcc33595e144aaa02b977954124ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caneara/snowflake/zipball/bded88f7f65fcc33595e144aaa02b977954124ba",
+                "reference": "bded88f7f65fcc33595e144aaa02b977954124ba",
+                "shasum": ""
+            },
+            "require": {
+                "godruoyi/php-snowflake": "^2.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Snowflake\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers.php"
+                ],
+                "psr-4": {
+                    "Snowflake\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A package to create Twitter Snowflake identifiers",
+            "homepage": "https://github.com/mattkingshott/snowflake",
+            "keywords": [
+                "database",
+                "laravel",
+                "php",
+                "snowflake"
+            ],
+            "support": {
+                "issues": "https://github.com/caneara/snowflake/issues",
+                "source": "https://github.com/caneara/snowflake/tree/v2.0.6"
+            },
+            "time": "2022-01-28T10:58:30+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -571,6 +627,65 @@
                 }
             ],
             "time": "2023-10-12T05:21:21+00:00"
+        },
+        {
+            "name": "godruoyi/php-snowflake",
+            "version": "2.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/godruoyi/php-snowflake.git",
+                "reference": "833ce5a542034c847ae9d74c4d89c9592cf77a4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godruoyi/php-snowflake/zipball/833ce5a542034c847ae9d74c4d89c9592cf77a4e",
+                "reference": "833ce5a542034c847ae9d74c4d89c9592cf77a4e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7|^8|^9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Godruoyi\\Snowflake\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Godruoyi",
+                    "email": "g@godruoyi.com"
+                }
+            ],
+            "description": "An ID Generator for PHP based on Snowflake Algorithm (Twitter announced).",
+            "homepage": "https://github.com/godruoyi/php-snowflake",
+            "keywords": [
+                "Unique ID",
+                "laravel snowflake",
+                "order id",
+                "php snowflake",
+                "php unique id",
+                "snowflake algorithm",
+                "unique order id"
+            ],
+            "support": {
+                "issues": "https://github.com/godruoyi/php-snowflake/issues",
+                "source": "https://github.com/godruoyi/php-snowflake/tree/2.2.4"
+            },
+            "funding": [
+                {
+                    "url": "https://images.godruoyi.com/wechat.png",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-07-05T13:35:47+00:00"
         },
         {
             "name": "graham-campbell/result-type",
