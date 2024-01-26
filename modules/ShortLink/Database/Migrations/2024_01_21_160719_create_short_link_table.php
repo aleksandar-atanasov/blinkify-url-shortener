@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('short_links', function (Blueprint $table) {
             $table->snowflake()->primary();
+            $table->unsignedBigInteger('counter');
             $table->string('short_url', 7);
             $table->string('original_url');
             $table->string('custom_url', 16)->nullable();
