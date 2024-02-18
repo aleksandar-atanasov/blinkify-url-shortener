@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use Snowflake\SnowflakeCast;
 use Snowflake\Snowflakes;
 
-class ShortLink extends Model
+class Counter extends Model
 {
     use Snowflakes;
 
     /**
      * @var string
      */
-    protected $table = 'short_links';
+    protected $table = 'counter';
 
     /**
      * The attributes that are mass assignable.
@@ -21,13 +21,10 @@ class ShortLink extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'short_url',
-        'original_url',
-        'user_id',
+        'value',
     ];
 
     protected $casts = [
-        'id'      => SnowflakeCast::class,
-        'user_id' => SnowflakeCast::class,
+        'id' => SnowflakeCast::class,
     ];
 }

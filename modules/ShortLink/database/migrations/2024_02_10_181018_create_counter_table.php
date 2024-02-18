@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('short_links', function (Blueprint $table) {
+        Schema::create('counter', function (Blueprint $table) {
             $table->snowflake()->primary();
-            $table->unsignedBigInteger('counter');
-            $table->string('short_url', 7);
-            $table->string('original_url');
-            $table->string('custom_url', 16)->nullable();
-            $table->foreignSnowflake('user_id')->constrained();
+            $table->unsignedBigInteger('value');
             $table->timestamps();
         });
+
+        DB::table('counter')->insert([
+            'id' => snowflake(),
+            'value' => config('app.counter', 100000000000)
+        ]);
     }
 };
