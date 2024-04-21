@@ -19,7 +19,9 @@ return new class extends Migration
 
         DB::table('counter')->insert([
             'id' => snowflake(),
-            'value' => config('app.counter', 100000000000)
+            'value' => config('app.counter', 100000000000),
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 };
