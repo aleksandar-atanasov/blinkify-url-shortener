@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('short_links', function (Blueprint $table) {
             $table->snowflake()->primary();
-            $table->unsignedBigInteger('counter')->index('short_links_counter_index');
+            $table->unsignedBigInteger('counter')->index('short_links_counter_index')->unique();
             $table->string('short_url')->unique();
             $table->string('original_url');
             $table->string('domain');

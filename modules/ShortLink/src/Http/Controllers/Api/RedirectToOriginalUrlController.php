@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Modules\ShortLink\Services\LinkService;
-use Throwable;
 
 class RedirectToOriginalUrlController extends Controller
 {
@@ -16,9 +15,6 @@ class RedirectToOriginalUrlController extends Controller
     {
     }
 
-    /**
-     * @throws Throwable
-     */
     public function __invoke(string $shortUrl): RedirectResponse|JsonResponse
     {
         try {
