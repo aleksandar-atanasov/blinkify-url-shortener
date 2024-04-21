@@ -1,4 +1,4 @@
-<p align="center"><img src="" width="400" alt="Blinkify Logo"></p>
+<p align="center"><img src="./public/storage/uploads/blinkifylogo.png" width="400" alt="Blinkify Logo"></p>
 
 
 
